@@ -6,7 +6,7 @@ namespace Algo_CSharp.Tests
     public class BinaryTreeTest
     {
         [Fact]
-        public void Print_1_2_4()
+        public void InOrder_Print_1_2_4()
         {
             var tree = new BinaryTree<int>(2);
             tree.Add(1);
@@ -15,7 +15,7 @@ namespace Algo_CSharp.Tests
         }
 
         [Fact]
-        public void Print_1_2_3_4_5()
+        public void InOrder_Print_1_2_3_4_5()
         {
             var tree = new BinaryTree<int>(5);
             tree.Add(4);
