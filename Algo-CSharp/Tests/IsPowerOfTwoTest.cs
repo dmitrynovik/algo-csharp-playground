@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using Xunit;
 
-namespace Algo_CSharp
+namespace Algo_CSharp.Tests
 {
     public class IsNumberOfTwoTest
     {

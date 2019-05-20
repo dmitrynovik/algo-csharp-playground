@@ -56,7 +56,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IsPowerOfTwoTest.cs" />
+    <Compile Include="BinaryTree.cs" />
+    <Compile Include="Tests\BinaryTreeTest.cs" />
+    <Compile Include="Tests\IsPowerOfTwoTest.cs" />
     <Compile Include="NumberExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
