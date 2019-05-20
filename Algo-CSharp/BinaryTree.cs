@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace Algo_CSharp
 {
@@ -45,15 +48,18 @@ namespace Algo_CSharp
                 }
             }
 
-            public void PrintInOrder(TextWriter writer)
+            public IEnumerable<T> InOrder()
             {
-                if (Left != null)
-                    Left.PrintInOrder(writer);
+                var items = Enumerate();
+                return items.Item1.Concat(items.Item2).Concat(items.Item3);
+            }
 
-                writer.Write(Value);
-                writer.Write(',');
-
-                Right?.PrintInOrder(writer);
+            private (IEnumerable<T>, IEnumerable<T>, IEnumerable<T>) Enumerate()
+            {
+                var left = Left != null ? Left.InOrder() : Enumerable.Empty<T>();
+                var right = Right != null ? Right.InOrder() : Enumerable.Empty<T>();
+                var self = new[] {Value};
+                return (left, self, right);
             }
         }
 
@@ -63,7 +69,7 @@ namespace Algo_CSharp
 
         public void Add(T value) => Root.Add(value);
 
-        public void PrintInOrder(TextWriter writer) => Root.PrintInOrder(writer);
-        public void PrintInOrder() => Root.PrintInOrder(Console.Out);
+        public IEnumerable<T> InOrder(TextWriter writer) => Root.InOrder();
+        public IEnumerable<T> InOrder() => Root.InOrder();
     }
 }
