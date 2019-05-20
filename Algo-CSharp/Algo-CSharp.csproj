@@ -58,8 +58,10 @@
   <ItemGroup>
     <Compile Include="Bfs.cs" />
     <Compile Include="BinaryTree.cs" />
+    <Compile Include="Dfs.cs" />
     <Compile Include="IGraphSearch.cs" />
     <Compile Include="Tests\BfsTest.cs" />
+    <Compile Include="Tests\DfsTest.cs" />
     <Compile Include="UndirectedGraph.cs" />
     <Compile Include="Tests\BinaryTreeTest.cs" />
     <Compile Include="Tests\IsPowerOfTwoTest.cs" />

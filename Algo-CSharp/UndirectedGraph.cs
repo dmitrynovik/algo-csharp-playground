@@ -32,7 +32,7 @@ namespace Algo_CSharp
             public override int GetHashCode() => Value.GetHashCode();
         }
 
-        private HashSet<Node> _nodes = new HashSet<Node>();
+        private readonly HashSet<Node> _nodes = new HashSet<Node>();
 
         public IEnumerable<Node> Nodes  => _nodes;
 

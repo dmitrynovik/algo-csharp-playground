@@ -1,11 +1,11 @@
 ﻿using System.Linq;
-using Xunit;
 using FluentAssertions;
 using FluentAssertions.Execution;
+using Xunit;
 
 namespace Algo_CSharp.Tests
 {
-    public class BfsTest
+    public class DfsTest
     {
         [Fact]
         public void Execute()
@@ -23,18 +23,13 @@ namespace Algo_CSharp.Tests
             graph.AddEdge(node1, node3);
             graph.AddEdge(node4, node2);
 
-            var bfs = new Bfs<int>(graph);
+            var bfs = new Dfs<int>(graph);
             bfs.Execute(node0);
 
-            using (new AssertionScope("assert BFS correctness"))
+            using (new AssertionScope("assert DFS correctness"))
             {
                 graph.Nodes.Select(n => n.Visited).Should().AllBeEquivalentTo(true);
-
                 node0.Score.Should().Be(0);
-                node1.Score.Should().Be(1);
-                node2.Score.Should().Be(1);
-                node3.Score.Should().Be(2);
-                node4.Score.Should().Be(2);
             }
         }
     }
