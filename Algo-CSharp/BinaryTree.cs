@@ -48,6 +48,18 @@ namespace Algo_CSharp
                 }
             }
 
+            public IEnumerable<T> PreOrder()
+            {
+                var items = Enumerate();
+                return items.Item2.Concat(items.Item1).Concat(items.Item3);
+            }
+
+            public IEnumerable<T> PostOrder()
+            {
+                var items = Enumerate();
+                return items.Item1.Concat(items.Item3).Concat(items.Item2);
+            }
+
             public IEnumerable<T> InOrder()
             {
                 var items = Enumerate();
@@ -69,7 +81,6 @@ namespace Algo_CSharp
 
         public void Add(T value) => Root.Add(value);
 
-        public IEnumerable<T> InOrder(TextWriter writer) => Root.InOrder();
         public IEnumerable<T> InOrder() => Root.InOrder();
     }
 }
