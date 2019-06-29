@@ -57,11 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bfs.cs" />
+    <Compile Include="BinaryHeap.cs" />
     <Compile Include="BinaryTree.cs" />
     <Compile Include="Dfs.cs" />
     <Compile Include="IGraphSearch.cs" />
+    <Compile Include="QSort.cs" />
     <Compile Include="Tests\BfsTest.cs" />
     <Compile Include="Tests\DfsTest.cs" />
+    <Compile Include="Tests\QSortTest.cs" />
+    <Compile Include="Tests\SortTest.cs" />
     <Compile Include="UndirectedGraph.cs" />
     <Compile Include="Tests\BinaryTreeTest.cs" />
     <Compile Include="Tests\IsPowerOfTwoTest.cs" />
