@@ -2,6 +2,6 @@
 {
     public class QSortTest : SortTest
     {
-        protected override void Sort(ref int[] input) => QSort.Sort(ref input);
+        protected override void Sort(ref int[] input) => QSort.Sort(input);
     }
 }
