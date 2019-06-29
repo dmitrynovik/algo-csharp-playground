@@ -63,7 +63,9 @@
     <Compile Include="IGraphSearch.cs" />
     <Compile Include="QSort.cs" />
     <Compile Include="Tests\BfsTest.cs" />
+    <Compile Include="Tests\BinaryHeapTest.cs" />
     <Compile Include="Tests\DfsTest.cs" />
+    <Compile Include="Tests\HeapSortTest.cs" />
     <Compile Include="Tests\QSortTest.cs" />
     <Compile Include="Tests\SortTest.cs" />
     <Compile Include="UndirectedGraph.cs" />
