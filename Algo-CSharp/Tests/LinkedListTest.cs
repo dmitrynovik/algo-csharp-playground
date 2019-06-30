@@ -24,6 +24,16 @@ namespace Algo_CSharp.Tests
         }
 
         [Fact]
+        public void Reverse_123()
+        {
+            var ll = new LinkedList<int>();
+            ll.Insert(1);
+            ll.Insert(2);
+            ll.Insert(3);
+            ll.Reverse().Items.Should().Equal(1, 2, 3);
+        }
+
+        [Fact]
         public void Insert_111()
         {
             var ll = new LinkedList<int>();

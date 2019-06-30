@@ -72,6 +72,16 @@ namespace Algo_CSharp
             }
         }
 
+        public LinkedList<T> Reverse()
+        {
+            var r = new LinkedList<T>();
+            foreach (var i in Items)
+            {
+                r.Insert(i);
+            }
+            return r;
+        }
+
         private void Remove(Node<T> node)
         {
             if (node.Prev != null)
